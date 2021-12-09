@@ -1,11 +1,11 @@
 import React from 'react'
 
-const NotFound = () => {
+const RockPaper = () => {
     return (
         <div>
-            Not Found
+            RockPaper
         </div>
     )
 }
 
-export default NotFound;
+export default RockPaper

@@ -1,11 +1,11 @@
 import React from 'react'
 
-const NotFound = () => {
+const Momery = () => {
     return (
         <div>
-            Not Found
+            Momery
         </div>
     )
 }
 
-export default NotFound;
+export default Momery
