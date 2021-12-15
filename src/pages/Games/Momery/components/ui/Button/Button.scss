@@ -1,0 +1,51 @@
+@import "./../../../assets/styles/abstract/variables";
+
+.btn {
+    border: $button-border-width;
+    cursor: pointer;
+    color: $alabaster;
+    &-primary {
+        background-color: $sun;
+        &:hover {
+            transition: background-color $button-hover-timing;
+            background-color: $texas-rose;
+        }
+    }
+    &-secondary {
+        background-color: $jungle-mist;
+        &:hover {
+            transition: background-color $button-hover-timing;
+            background-color: $hippie-blue;
+        }
+    }
+    &-inverse {
+        background-color: $mystic;
+        color: $pickled-bluewood;
+        &:hover {
+            transition: background-color $button-hover-timing;
+            background-color: $jungle-mist;
+        }
+    }
+    &-active {
+        background-color: $pickled-bluewood;
+    }
+
+    &-lg {
+        min-height: $button-lg-min-height;
+        min-width: $button-lg-min-width;
+        border-radius: $button-lg-radius;
+        font-size: 2rem;
+    }
+    &-md {
+        min-height: $button-md-min-height;
+        min-width: $button-md-min-width;
+        border-radius: $button-md-radius;
+        font-size: 1.625rem;
+    }
+    &-sm {
+        min-height: $button-sm-min-height;
+        min-width: $button-sm-min-width;
+        border-radius: $button-sm-radius;
+        font-size: 1.25rem;
+    }
+}
