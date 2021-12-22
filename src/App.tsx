@@ -1,24 +1,33 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
-import Games from './pages/Games/Games';
-import Home from './pages/Home/Home';
+import React, { Suspense } from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import NotFound from './pages/NotFound';
 
-const About = React.lazy(() => import("./pages/Home/Home"));
-const Dashboard = React.lazy(() => import("./pages/NotFound"));
+const HomePage = React.lazy(() => import('./pages/Home/Home'));
+const GamePage = React.lazy(() => import('./pages/Games/Games'));
 
-
-function App() {
-  return (
-    <Router>
-      <Routes>
-        <Route index element={<Games />} />
-        <Route path="home" element={<Home/>} />
-        <Route path="game" element={<Games/>} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
-    </Router>
-  );
-}
+const App = () => (
+  <Router>
+    <Routes>
+      <Route path="/" element={GamePage} />
+      <Route
+        path="home"
+        element={(
+          <Suspense fallback={<>...</>}>
+            <HomePage />
+          </Suspense>
+      )}
+      />
+      <Route
+        path="game/*"
+        element={(
+          <Suspense fallback={<>...</>}>
+            <GamePage />
+          </Suspense>
+      )}
+      />
+      <Route path="*" element={<NotFound />} />
+    </Routes>
+  </Router>
+);
 
 export default App;
