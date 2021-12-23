@@ -1,5 +1,3 @@
-const Icons: string[] = [
+const Icons: string[] = [];
 
-]
-
-export default Icons
+export default Icons;

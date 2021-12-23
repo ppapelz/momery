@@ -1,18 +1,31 @@
-import React from 'react'
-import { Navigate, Route, Routes } from 'react-router'
-import NotFound from '../NotFound'
-import Momery from './Momery/Momery'
-import RockPaper from './RockPaper/RockPaper'
+import React, { Suspense } from 'react';
+import { Route, Routes } from 'react-router-dom';
+import NotFound from '../NotFound';
 
-function Games() {
-    return (
-        <Routes>
-            <Route index element={<Momery />} />
-            <Route path="momery" element={<Momery/>} />
-            <Route path="rps" element={<RockPaper/>} />
-            <Route path="*" element={<NotFound />} />
-      </Routes>
-    )
-}
+const MomeryPage = React.lazy(() => import('./Momery/Momery'));
+const RpsPage = React.lazy(() => import('./RockPaper/RockPaper'));
 
-export default Games
+const Games = () => (
+  <Routes>
+    <Route path="/" element={<MomeryPage />} />
+    <Route
+      path="/momery"
+      element={(
+        <Suspense fallback={<>...</>}>
+          <MomeryPage />
+        </Suspense>
+      )}
+    />
+    <Route
+      path="/rps"
+      element={(
+        <Suspense fallback={<>...</>}>
+          <RpsPage />
+        </Suspense>
+      )}
+    />
+    <Route path="*" element={<NotFound />} />
+  </Routes>
+);
+
+export default Games;
