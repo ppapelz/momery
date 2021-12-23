@@ -5,19 +5,19 @@ import React from 'react';
 export enum ButtonSize {
     SMALL = 'sm',
     MEDIUM = 'md',
-    LARGE = 'lg'
+    LARGE = 'lg',
 }
 
 export enum ButtonVariant {
     PRIMARY = 'primary',
     SECONDARY = 'secondary',
-    INVERSE = 'inverse'
+    INVERSE = 'inverse',
 }
 interface ButtonProps {
-    value: string
-    size: ButtonSize
-    variant: ButtonVariant
-    disabled?: boolean
+    value: string;
+    size: ButtonSize;
+    variant: ButtonVariant;
+    disabled?: boolean;
     onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
