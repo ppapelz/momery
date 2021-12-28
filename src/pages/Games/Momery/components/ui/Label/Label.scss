@@ -1,0 +1,59 @@
+@import "./../../../assets/styles/abstract/variables";
+@import "./../../../assets/styles/abstract/mixins";
+
+@mixin size($minHeight, $minWidth, $borderRadius, $labelFontSize, $valueFontSize) {
+    min-height: $minHeight;
+    min-width: $minWidth;
+    border-radius: $borderRadius;
+
+    &-label {
+        font-size: $labelFontSize;
+    }
+
+    &-value {
+        font-size: $valueFontSize;
+    }
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    border: $label-border-width;
+    &-primary {
+        background-color: $mystic;
+    }
+    &-secondary {
+        background-color: $big-stone;
+    }
+    &-indicator {
+        background-color: $sun;
+    }
+
+    &-lg {
+        @include size(
+            $label-lg-min-height,
+            $label-lg-min-width,
+            $label-lg-radius,
+            $label-lg-label-font-size,
+            $label-lg-value-font-size
+        );
+    }
+    &-md {
+        @include size(
+            $label-md-min-height,
+            $label-md-min-width,
+            $label-md-radius,
+            $label-md-label-font-size,
+            $label-md-value-font-size
+        );
+    }
+    &-sm {
+        @include size(
+            $label-sm-min-height,
+            $label-sm-min-width,
+            $label-sm-radius,
+            $label-sm-label-font-size,
+            $label-sm-value-font-size
+        );
+    }
+}

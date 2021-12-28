@@ -3,7 +3,9 @@ import './assets/styles/momery.scss';
 import Icon from './components/ui/Icon/Icon';
 import './components/ui/Icon/fontawesome';
 import Button from './components/ui/Button/Button';
-import { ButtonSize, ButtonVariant } from './components/ui/Button/Types';
+import Label from './components/ui/Label/Label';
+import { ButtonSize, ButtonVariant } from './components/ui/Button/types';
+import { LabelVariant } from './components/ui/Label/types';
 
 const Momery = () => {
     const [buttonValue] = useState('Start Game');
@@ -40,6 +42,8 @@ const Momery = () => {
                 size={ButtonSize.SMALL}
                 value="New Game"
             />
+
+            <Label label="label" value="value" variant={LabelVariant.PRIMARY} />
         </>
     );
 };

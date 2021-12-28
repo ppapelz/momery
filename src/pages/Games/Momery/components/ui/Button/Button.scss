@@ -1,4 +1,12 @@
 @import "./../../../assets/styles/abstract/variables";
+@import "./../../../assets/styles/abstract/mixins";
+
+@mixin size($minHeight, $minWidth, $borderRadius, $fontSize) {
+    min-height: $minHeight;
+    min-width: $minWidth;
+    border-radius: $borderRadius;
+    font-size: $fontSize;
+}
 
 .btn {
     border: $button-border-width;
@@ -31,21 +39,12 @@
     }
 
     &-lg {
-        min-height: $button-lg-min-height;
-        min-width: $button-lg-min-width;
-        border-radius: $button-lg-radius;
-        font-size: 2rem;
+        @include size($button-lg-min-height, $button-lg-min-width, $button-lg-radius, $button-lg-font-size);
     }
     &-md {
-        min-height: $button-md-min-height;
-        min-width: $button-md-min-width;
-        border-radius: $button-md-radius;
-        font-size: 1.625rem;
+        @include size($button-md-min-height, $button-md-min-width, $button-md-radius, $button-md-font-size);
     }
     &-sm {
-        min-height: $button-sm-min-height;
-        min-width: $button-sm-min-width;
-        border-radius: $button-sm-radius;
-        font-size: 1.25rem;
+        @include size($button-sm-min-height, $button-sm-min-width, $button-sm-radius, $button-sm-font-size);
     }
 }
