@@ -1,23 +1,51 @@
-$sun: #FDA214;
-$texas-rose: #FFB84A;
-$concrete: #F2F2F2;
-$jungle-mist: #BCCED9;
-$gothic: #7191A5;
+$sun: #fda214;
+$texas-rose: #ffb84a;
+$concrete: #f2f2f2;
+$jungle-mist: #bcced9;
+$gothic: #7191a5;
 $pickled-bluewood: #304859;
-$hippie-blue: #6395B8;
+$hippie-blue: #6395b8;
 $big-stone: #152938;
-$alabaster: #FCFCFC;
-$mystic: #DFE7EC;
+$alabaster: #fcfcfc;
+$mystic: #dfe7ec;
 
 // BUTTON
 $button-border-width: 0;
 $button-lg-min-height: 4.375rem;
 $button-lg-min-width: 33.8125rem;
 $button-lg-radius: 2.1875rem;
+$button-lg-font-size: 2rem;
 $button-md-min-height: 3.25rem;
 $button-md-min-width: 16rem;
 $button-md-radius: 1.625rem;
+$button-md-font-size: 1.625rem;
 $button-sm-min-height: 3.25rem;
 $button-sm-min-width: 7.9375rem;
 $button-sm-radius: 1.625rem;
+$button-sm-font-size: 1.25rem;
 $button-hover-timing: ease-in 0.25s;
+
+// LABEL
+
+$label-border-width: 0;
+$label-lg-min-height: 4.5rem;
+$label-lg-min-width: 33.875rem;
+$label-lg-radius: 0.625rem;
+$label-lg-title-font-size: 1.125rem;
+$label-lg-value-font-size: 2rem;
+$label-lg-value-margin: 0 2rem 0 0;
+$label-lg-title-margin: 0 0 0 2rem;
+$label-md-min-height: 3rem;
+$label-md-min-width: 17.4375rem;
+$label-md-radius: 0.3125rem;
+$label-md-title-font-size: 0.8125rem;
+$label-md-value-font-size: 1.25rem;
+$label-md-value-margin: 0 1rem 0 0;
+$label-md-title-margin: 0 0 0 1rem;
+$label-sm-min-height: 4.5rem;
+$label-sm-min-width: 15.9375rem;
+$label-sm-radius: 0.625rem;
+$label-sm-title-font-size: 1.125rem;
+$label-sm-value-font-size: 2rem;
+$label-sm-value-margin: 0 1.375rem 0 0;
+$label-sm-title-margin: 0 0 0 1.375rem;

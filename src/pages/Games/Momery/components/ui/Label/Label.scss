@@ -1,0 +1,80 @@
+@import "./../../../assets/styles/abstract/variables";
+@import "./../../../assets/styles/abstract/mixins";
+
+@mixin size($minHeight, $minWidth, $borderRadius, $titleFontSize, $valueFontSize, $valueMargin, $titleMargin) {
+    min-height: $minHeight;
+    min-width: $minWidth;
+    border-radius: $borderRadius;
+
+    &-title {
+        margin: $titleMargin;
+        font-size: $titleFontSize;
+    }
+
+    &-value {
+        margin: $valueMargin;
+        font-size: $valueFontSize;
+    }
+}
+
+@mixin color($backgroundColor, $titleColor, $valueColor) {
+    background-color: $backgroundColor;
+
+    &-title {
+        color: $titleColor;
+    }
+
+    &-value {
+        color: $valueColor;
+    }
+}
+
+.lbl {
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    border: $label-border-width;
+    &-primary {
+        @include color($mystic, $gothic, $pickled-bluewood);
+    }
+    &-secondary {
+        @include color($big-stone, $alabaster, $alabaster);
+    }
+    &-indicator {
+        @include color($sun, $alabaster, $alabaster);
+    }
+
+    &-lg {
+        @include size(
+            $label-lg-min-height,
+            $label-lg-min-width,
+            $label-lg-radius,
+            $label-lg-title-font-size,
+            $label-lg-value-font-size,
+            $label-lg-value-margin,
+            $label-lg-title-margin
+        );
+    }
+    &-md {
+        @include size(
+            $label-md-min-height,
+            $label-md-min-width,
+            $label-md-radius,
+            $label-md-title-font-size,
+            $label-md-value-font-size,
+            $label-md-value-margin,
+            $label-md-title-margin
+        );
+    }
+    &-sm {
+        @include size(
+            $label-sm-min-height,
+            $label-sm-min-width,
+            $label-sm-radius,
+            $label-sm-title-font-size,
+            $label-sm-value-font-size,
+            $label-sm-value-margin,
+            $label-sm-title-margin
+        );
+    }
+}

@@ -1,11 +1,7 @@
-import React from 'react'
+import React from 'react';
 
 const RockPaper = () => {
-    return (
-        <div>
-            RockPaper
-        </div>
-    )
-}
+    return <div>RockPaper</div>;
+};
 
-export default RockPaper
+export default RockPaper;
