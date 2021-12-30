@@ -12,7 +12,7 @@ export enum LabelSize {
 
 export interface LabelProps {
     value?: string;
-    label?: string;
+    title?: string;
     variant: LabelVariant;
     size?: LabelSize;
 }

@@ -1,32 +1,47 @@
 @import "./../../../assets/styles/abstract/variables";
 @import "./../../../assets/styles/abstract/mixins";
 
-@mixin size($minHeight, $minWidth, $borderRadius, $labelFontSize, $valueFontSize) {
+@mixin size($minHeight, $minWidth, $borderRadius, $titleFontSize, $valueFontSize, $valueMargin, $titleMargin) {
     min-height: $minHeight;
     min-width: $minWidth;
     border-radius: $borderRadius;
 
-    &-label {
-        font-size: $labelFontSize;
+    &-title {
+        margin: $titleMargin;
+        font-size: $titleFontSize;
     }
 
     &-value {
+        margin: $valueMargin;
         font-size: $valueFontSize;
     }
 }
 
-.container {
-    display: flex;
+@mixin color($backgroundColor, $titleColor, $valueColor) {
+    background-color: $backgroundColor;
+
+    &-title {
+        color: $titleColor;
+    }
+
+    &-value {
+        color: $valueColor;
+    }
+}
+
+.lbl {
+    display: inline-flex;
     justify-content: space-between;
+    align-items: center;
     border: $label-border-width;
     &-primary {
-        background-color: $mystic;
+        @include color($mystic, $gothic, $pickled-bluewood);
     }
     &-secondary {
-        background-color: $big-stone;
+        @include color($big-stone, $alabaster, $alabaster);
     }
     &-indicator {
-        background-color: $sun;
+        @include color($sun, $alabaster, $alabaster);
     }
 
     &-lg {
@@ -34,8 +49,10 @@
             $label-lg-min-height,
             $label-lg-min-width,
             $label-lg-radius,
-            $label-lg-label-font-size,
-            $label-lg-value-font-size
+            $label-lg-title-font-size,
+            $label-lg-value-font-size,
+            $label-lg-value-margin,
+            $label-lg-title-margin
         );
     }
     &-md {
@@ -43,8 +60,10 @@
             $label-md-min-height,
             $label-md-min-width,
             $label-md-radius,
-            $label-md-label-font-size,
-            $label-md-value-font-size
+            $label-md-title-font-size,
+            $label-md-value-font-size,
+            $label-md-value-margin,
+            $label-md-title-margin
         );
     }
     &-sm {
@@ -52,8 +71,10 @@
             $label-sm-min-height,
             $label-sm-min-width,
             $label-sm-radius,
-            $label-sm-label-font-size,
-            $label-sm-value-font-size
+            $label-sm-title-font-size,
+            $label-sm-value-font-size,
+            $label-sm-value-margin,
+            $label-sm-title-margin
         );
     }
 }
