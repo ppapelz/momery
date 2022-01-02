@@ -27,6 +27,26 @@ const Momery = () => {
                 size={LabelSize.LARGE}
                 variant={LabelVariant.SECONDARY}
             />
+
+            <br />
+            <br />
+
+            <Label
+                title="Time"
+                value="1:53"
+                size={LabelSize.XSMALL}
+                variant={LabelVariant.PRIMARY}
+            />
+
+            <br />
+            <br />
+
+            <Label
+                title="P2"
+                value="4"
+                size={LabelSize.XXSMALL}
+                variant={LabelVariant.PRIMARY}
+            />
         </>
     );
 };
