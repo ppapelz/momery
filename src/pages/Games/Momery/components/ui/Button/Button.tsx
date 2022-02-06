@@ -3,9 +3,10 @@ import ButtonProps from './types';
 import './Button.scss';
 
 const Button: React.FC<ButtonProps> = (prop: ButtonProps) => {
-    const { value, size, variant, disabled, onClick } = prop;
-    const btnClasses = `btn btn-${size} btn-${variant}`;
-
+    const { value, size, variant, disabled, onClick, active } = prop;
+    const btnClasses = `btn btn-${size} btn-${variant} ${
+        active ? 'btn-active' : ''
+    }`;
     const handleClick = (
         e: React.MouseEvent<HTMLButtonElement, MouseEvent>
     ) => {
