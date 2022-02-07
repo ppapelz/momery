@@ -1,6 +1,21 @@
-@import "../../../assets/styles/abstract/variables";
+@import '../../../assets/styles/abstract/variables';
 
 .icon {
-    color: black;
-    font-size: 3.5rem;
+    color: $alabaster;
+
+    &-xs {
+        font-size: 1.5rem;
+    }
+
+    &-sm {
+        font-size: 2.5rem;
+    }
+
+    &-md {
+        font-size: 2.75rem;
+    }
+
+    &-lg {
+        font-size: 3.5rem;
+    }
 }
