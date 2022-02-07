@@ -19,6 +19,7 @@ interface ButtonProps {
     variant: ButtonVariant;
     disabled?: boolean;
     onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
+    active?: boolean;
 }
 
 export default ButtonProps;

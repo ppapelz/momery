@@ -5,6 +5,8 @@ export enum LabelVariant {
 }
 
 export enum LabelSize {
+    XXSMALL = 'xxs',
+    XSMALL = 'xs',
     SMALL = 'sm',
     MEDIUM = 'md',
     LARGE = 'lg',
