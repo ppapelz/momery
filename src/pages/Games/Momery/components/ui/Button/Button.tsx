@@ -1,10 +1,10 @@
 import React from 'react';
-import ButtonProps from './Types';
 import './Button.scss';
+import ButtonProps from './type';
 
-const Button: React.FC<ButtonProps> = (prop: ButtonProps) => {
-    const { value, size, variant, disabled, onClick, active } = prop;
-    const btnClasses = `btn btn-${size} btn-${variant} ${
+const Button: React.FC<ButtonProps> = (props: ButtonProps) => {
+    const { value, size, variant, disabled, onClick, active } = props;
+    const btnClasses = `btn btn-${size} ${!active ? `btn-${variant}` : ''} ${
         active ? 'btn-active' : ''
     }`;
     const handleClick = (

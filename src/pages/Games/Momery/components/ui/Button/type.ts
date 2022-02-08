@@ -18,7 +18,7 @@ interface ButtonProps {
     size: ButtonSize;
     variant: ButtonVariant;
     disabled?: boolean;
-    onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
+    onClick?: (event?: React.MouseEvent<HTMLButtonElement>) => void;
     active?: boolean;
 }
 
