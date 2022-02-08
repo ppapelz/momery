@@ -1,0 +1,77 @@
+@import './../../../assets/styles/abstract/variables';
+@import './../../../assets/styles/abstract/mixins';
+
+@mixin color($backgroundColor, $color) {
+    background-color: $backgroundColor;
+    color: $color;
+}
+
+@mixin size($minHeight, $minWidth, $borderRadius, $fontSize) {
+    min-height: $minHeight;
+    min-width: $minWidth;
+    border-radius: $borderRadius;
+
+    &-text {
+        font-size: $fontSize;
+    }
+}
+
+.circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-width: 0;
+    cursor: pointer;
+
+    &-closed {
+        background-color: $pickled-bluewood;
+
+        &:hover {
+            background-color: $hippie-blue;
+        }
+    }
+
+    &-opened {
+        @include color($jungle-mist, $alabaster);
+    }
+
+    &-matched {
+        @include color($sun, $alabaster);
+    }
+
+    &-xs {
+        @include size(
+            $circle-xs-min-height,
+            $circle-xs-min-width,
+            $circle-xs-border-radius,
+            $circle-xs-value-font-size
+        );
+    }
+
+    &-sm {
+        @include size(
+            $circle-sm-min-height,
+            $circle-sm-min-width,
+            $circle-sm-border-radius,
+            $circle-sm-value-font-size
+        );
+    }
+
+    &-md {
+        @include size(
+            $circle-md-min-height,
+            $circle-md-min-width,
+            $circle-md-border-radius,
+            $circle-md-value-font-size
+        );
+    }
+
+    &-lg {
+        @include size(
+            $circle-lg-min-height,
+            $circle-lg-min-width,
+            $circle-lg-border-radius,
+            $circle-lg-value-font-size
+        );
+    }
+}
