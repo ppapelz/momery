@@ -1,5 +1,5 @@
-@import './../../../assets/styles/abstract/variables';
-@import './../../../assets/styles/abstract/mixins';
+@import "./../../../assets/styles/abstract/variables";
+@import "./../../../assets/styles/abstract/mixins";
 
 @mixin color($backgroundColor, $color) {
     background-color: $backgroundColor;
@@ -17,9 +17,7 @@
 }
 
 .circle {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include center(row);
     border-width: 0;
     cursor: pointer;
 

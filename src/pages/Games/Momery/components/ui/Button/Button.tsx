@@ -1,12 +1,14 @@
 import React from 'react';
 import './Button.scss';
-import ButtonProps from './type';
+import ButtonProps from './types';
 
 const Button: React.FC<ButtonProps> = (props: ButtonProps) => {
-    const { value, size, variant, disabled, onClick, active } = props;
+    const { size, variant, disabled, onClick, active, mobile, children } =
+        props;
+
     const btnClasses = `btn btn-${size} ${!active ? `btn-${variant}` : ''} ${
         active ? 'btn-active' : ''
-    }`;
+    } ${mobile ? `btn-${size}-mb` : ''}`;
     const handleClick = (
         e: React.MouseEvent<HTMLButtonElement, MouseEvent>
     ) => {
@@ -21,7 +23,7 @@ const Button: React.FC<ButtonProps> = (props: ButtonProps) => {
 
     return (
         <button type="button" className={btnClasses} onClick={handleClick}>
-            {value}
+            {children}
         </button>
     );
 };

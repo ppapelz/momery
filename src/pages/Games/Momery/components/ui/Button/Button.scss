@@ -6,6 +6,12 @@
     min-width: $minWidth;
     border-radius: $borderRadius;
     font-size: $fontSize;
+
+    &-mb {
+        min-height: calc(($minHeight / 3) * 2);
+        min-width: calc($minWidth / 2);
+        font-size: calc($fontSize - 8px);
+    }
 }
 
 .btn {
