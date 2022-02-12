@@ -1,7 +1,9 @@
-import React from 'react';
 import Button from '../../components/ui/Button/Button';
 import { ButtonSize, ButtonVariant } from '../../components/ui/Button/type';
 import ButtonGroup from '../../components/ui/ButtonGroup/ButtonGroup';
+import Card from '../../components/ui/Card/Card';
+import useMediaQuery from '../../hooks/useMediaQuery';
+
 import './StartGame.scss';
 
 const menus = [
@@ -69,30 +71,34 @@ const StartGame = () => {
     const handleChange = (btnValue: string) => {
         console.log(btnValue);
     };
+    const isMobile = useMediaQuery('(max-width: 768px)');
+    const menuClasses = `menu ${isMobile ? 'menu-mb' : ''}`;
     return (
         <div className="wrapper">
-            <h1>memory</h1>
-            <div className="menu">
-                {menus.map((menu) => (
-                    <div key={menu.title} className="menu-item">
-                        <div className="menu-title"> {menu.title} </div>
-                        <div className="menu-btn-group">
+            <Card mobile={isMobile}>
+                <div className={menuClasses}>
+                    {menus.map((menu) => (
+                        <div key={menu.title} className="menu-item">
+                            <div className="menu-title"> {menu.title} </div>
                             <ButtonGroup
                                 buttons={menu.buttons}
                                 value={menu.selected}
                                 change={handleChange}
+                                mobile={isMobile}
                             />
                         </div>
+                    ))}
+                    <div className="menu-start-button">
+                        <Button
+                            size={ButtonSize.LARGE}
+                            variant={ButtonVariant.PRIMARY}
+                            mobile={isMobile}
+                        >
+                            Start Game
+                        </Button>
                     </div>
-                ))}
-                <div className="menu-start-button">
-                    <Button
-                        value="Start Game"
-                        size={ButtonSize.LARGE}
-                        variant={ButtonVariant.PRIMARY}
-                    />
                 </div>
-            </div>
+            </Card>
         </div>
     );
 };

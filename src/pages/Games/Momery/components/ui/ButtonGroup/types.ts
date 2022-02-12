@@ -5,6 +5,7 @@ interface ButtonGroupProps {
     buttons: ButtonProps[];
     disabled?: boolean;
     change: (value: string) => void;
+    mobile?: boolean;
 }
 
 export default ButtonGroupProps;

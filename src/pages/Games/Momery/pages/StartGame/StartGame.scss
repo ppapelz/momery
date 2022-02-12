@@ -1,47 +1,31 @@
 @import "./../../assets//styles/abstract/variables";
+@import "./../../assets//styles/abstract/mixins";
 
 .wrapper {
     background-color: $big-stone;
     position: absolute;
     inset: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    @include center(column);
+}
 
-    .menu {
-        width: 654px;
-        height: 559px;
-        border-radius: 20px;
-        background-color: $alabaster;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        &-title {
-            color: $gothic;
-            margin-bottom: 16px;
-        }
-        &-item {
-            margin-top: 32px;
-        }
-        &-start-button {
-            margin-top: 32px;
-        }
-        &-option-button {
-            margin-right: 25px;
-        }
-        &-btn-group {
-            @for $i from 1 through 4 {
-                Button:first-child:nth-last-child(#{$i}):not(:last-child),
-                Button:first-child:nth-last-child(#{$i}) ~ Button:not(:last-child) {
-                    margin-right: 50px / $i;
-                }
-            }
-        }
+.menu {
+    @include center(column);
+    &-title {
+        color: $gothic;
+        margin-bottom: $button-group-title-margin;
+        font-size: $button-group-title-font-size;
     }
+    &-item:not(:first-child) {
+        margin-top: $button-group-item-margin;
+    }
+    &-start-button {
+        margin-top: $button-group-button-margin;
+    }
+}
 
-    h1 {
-        color: $alabaster;
-    }
+.menu-mb {
+    --button-group-title-margin: 0.5rem;
+    --button-group-item-margin: 1rem;
+    --button-group-button-margin: 1rem;
+    --button-group-title-font-size: 0.75rem;
 }

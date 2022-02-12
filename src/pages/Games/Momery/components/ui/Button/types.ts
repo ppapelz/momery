@@ -14,12 +14,14 @@ export enum ButtonVariant {
     INVERSE = 'inverse',
 }
 interface ButtonProps {
-    value: string;
+    value?: string;
     size: ButtonSize;
     variant: ButtonVariant;
     disabled?: boolean;
     onClick?: (event?: React.MouseEvent<HTMLButtonElement>) => void;
     active?: boolean;
+    mobile?: boolean;
+    children?: string;
 }
 
 export default ButtonProps;
