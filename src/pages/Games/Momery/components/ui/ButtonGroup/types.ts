@@ -1,4 +1,4 @@
-import ButtonProps from '../Button/type';
+import ButtonProps from '../Button/types';
 
 interface ButtonGroupProps {
     value: string;
