@@ -1,0 +1,24 @@
+@import './../../assets//styles/abstract/variables';
+
+.header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo {
+        color: $big-stone;
+        font-size: 2.5rem;
+        line-height: 3.1rem;
+    }
+
+    .menu {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        &-restart-button {
+            margin-right: 16px;
+        }
+        &-new-game-button {
+        }
+    }
+}
