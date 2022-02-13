@@ -1,0 +1,17 @@
+@import './../../assets//styles/abstract/variables';
+
+.wrapper {
+    margin: 4.0625rem 10.3125rem 0rem 10.3125rem;
+}
+
+@media (max-width: 767.98px) {
+    .wrapper {
+        margin: 1.5rem 1.5rem 0rem 1.5rem;
+    }
+}
+
+@media (max-width: 1439.98px) {
+    .wrapper {
+        margin: 2.1875rem 2.5rem 0rem 2.5rem;
+    }
+}
