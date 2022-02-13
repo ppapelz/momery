@@ -1,5 +1,6 @@
+import React from 'react';
 import Button from '../../components/ui/Button/Button';
-import { ButtonSize, ButtonVariant } from '../../components/ui/Button/type';
+import { ButtonSize, ButtonVariant } from '../../components/ui/Button/types';
 import ButtonGroup from '../../components/ui/ButtonGroup/ButtonGroup';
 import Card from '../../components/ui/Card/Card';
 import useMediaQuery from '../../hooks/useMediaQuery';
@@ -67,7 +68,7 @@ const menus = [
     },
 ];
 
-const StartGame = () => {
+const StartGame: React.FC<any> = () => {
     const handleChange = (btnValue: string) => {
         console.log(btnValue);
     };
