@@ -1,24 +1,22 @@
-import React, { Suspense } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import NotFound from './pages/NotFound';
 
-const GamePage = React.lazy(() => import('./pages/Games/Games'));
+import './assets/styles/main.scss';
+
+const StartGame = React.lazy(() => import('./pages/StartGame/StartGame'));
+const PlayGame = React.lazy(() => import('./pages/PlayGame/PlayGame'));
+const NotFound = React.lazy(() => import('./pages/NotFound/NotFound'));
 
 const App = () => (
-    <Router>
-        <Routes>
-            <Route path="/" element={GamePage} />
-            <Route
-                path="game/*"
-                element={
-                    <Suspense fallback={<>...</>}>
-                        <GamePage />
-                    </Suspense>
-                }
-            />
-            <Route path="*" element={<NotFound />} />
-        </Routes>
-    </Router>
+    <React.Suspense fallback={<span>Loading...</span>}>
+        <Router>
+            <Routes>
+                <Route path="/" element={<StartGame />} />
+                <Route path="/play-momery" element={<PlayGame />} />
+                <Route path="*" element={<NotFound />} />
+            </Routes>
+        </Router>
+    </React.Suspense>
 );
 
 export default App;

@@ -1,0 +1,102 @@
+$sun: #fda214;
+$texas-rose: #ffb84a;
+$concrete: #f2f2f2;
+$jungle-mist: #bcced9;
+$gothic: #7191a5;
+$pickled-bluewood: #304859;
+$hippie-blue: #6395b8;
+$big-stone: #152938;
+$alabaster: #fcfcfc;
+$mystic: #dfe7ec;
+$hippie-blue: #6395b8;
+
+// BUTTON
+$button-border-width: 0;
+$button-lg-min-height: 4.375rem;
+$button-lg-min-width: 33.8125rem;
+$button-lg-radius: 2.1875rem;
+$button-lg-font-size: 2rem;
+$button-md-min-height: 3.25rem;
+$button-md-min-width: 16rem;
+$button-md-radius: 1.625rem;
+$button-md-font-size: 1.625rem;
+$button-sm-min-height: 3.25rem;
+$button-sm-min-width: 7.9375rem;
+$button-sm-radius: 1.625rem;
+$button-sm-font-size: 1.25rem;
+$button-hover-timing: ease-in 0.25s;
+
+// LABEL
+
+$label-display: inline-flex;
+$label-flex-direction: row;
+$label-justify-content: space-between;
+$label-align-items: center;
+$label-border-width: 0;
+
+$label-lg-min-height: 4.5rem;
+$label-lg-min-width: 33.875rem;
+$label-lg-radius: 0.625rem;
+$label-lg-title-font-size: 1.125rem;
+$label-lg-value-font-size: 2rem;
+$label-lg-value-margin: 0 2rem 0 0;
+$label-lg-title-margin: 0 0 0 2rem;
+
+$label-md-min-height: 3rem;
+$label-md-min-width: 17.4375rem;
+$label-md-radius: 0.3125rem;
+$label-md-title-font-size: 0.8125rem;
+$label-md-value-font-size: 1.25rem;
+$label-md-value-margin: 0 1rem 0 0;
+$label-md-title-margin: 0 0 0 1rem;
+
+$label-sm-min-height: 4.5rem;
+$label-sm-min-width: 15.9375rem;
+$label-sm-radius: 0.625rem;
+$label-sm-title-font-size: 1.125rem;
+$label-sm-value-font-size: 2rem;
+$label-sm-value-margin: 0 1.375rem 0 0;
+$label-sm-title-margin: 0 0 0 1.375rem;
+
+$label-xs-min-height: 4.375rem;
+$label-xs-min-width: 9.4375rem;
+$label-xs-radius: 0.3125rem;
+$label-xs-title-font-size: 0.9375rem;
+$label-xs-value-font-size: 1.5rem;
+$label-xs-value-margin: 0 0 0.625rem 0;
+$label-xs-title-margin: 0.5625rem 0 0 0;
+
+$label-xxs-min-height: 4.375rem;
+$label-xxs-min-width: 4rem;
+$label-xxs-radius: 0.3125rem;
+$label-xxs-title-font-size: 1.1875rem;
+$label-xxs-value-font-size: 1.5rem;
+$label-xxs-value-margin: 0 0 0.625rem 0;
+$label-xxs-title-margin: 0.5625rem 0 0 0;
+
+// CIRCLE
+$circle-xs-min-height: 2.93rem;
+$circle-xs-min-width: 2.93rem;
+$circle-xs-border-radius: 2.625rem;
+$circle-xs-value-font-size: 1.5rem;
+$circle-sm-min-height: 4.533125rem;
+$circle-sm-min-width: 4.533125rem;
+$circle-sm-border-radius: 3.6875rem;
+$circle-sm-value-font-size: 2.5rem;
+$circle-md-min-height: 5.125rem;
+$circle-md-min-width: 5.125rem;
+$circle-md-border-radius: 2.5625rem;
+$circle-md-value-font-size: 2.75rem;
+$circle-lg-min-height: 7.375rem;
+$circle-lg-min-width: 7.375rem;
+$circle-lg-border-radius: 3.6875rem;
+$circle-lg-value-font-size: 3.5rem;
+
+//StartGame Page
+
+$button-group-margin-right: 2.5rem;
+$button-group-margin-right-mb: 2rem;
+$button-group-title-margin: var(--button-group-title-margin);
+$button-group-item-margin: var(--button-group-item-margin);
+$button-group-button-margin: var(--button-group-button-margin);
+$button-group-title-font-size: var(--button-group-title-font-size);
